@@ -1,28 +1,27 @@
-package com.devleomeloo.people_management.entity;
+package com.devleomeloo.people_management.dto.request;
 
 import com.devleomeloo.people_management.enums.PhoneTypeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import javax.validation.constraints.NotEmpty;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.validation.constraints.Size;
 
-import javax.persistence.*;
-
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Data
-public class PhoneNumber {
+public class PhoneDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
     private PhoneTypeEnum type;
 
-    @Column(nullable = false)
+    @NotEmpty
+    @Size(min = 13, max = 14)
     private String number;
 }
