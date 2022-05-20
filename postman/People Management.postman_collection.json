@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "b4579ba2-681d-405c-aad9-d5680b8e9842",
+		"name": "People Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10232173"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Pessoas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Leo\",\r\n    \"lastName\": \"Melo\",\r\n    \"cpf\": \"567.545.090-40\",\r\n    \"phones\": [\r\n        {\r\n            \"type\": \"MOBILE\",\r\n            \"number\": \"(11)123456789\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Pessoas",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Leo\",\r\n    \"lastName\": \"Melo\",\r\n    \"cpf\": \"873.708.920-00\",\r\n    \"phones\": [\r\n        {\r\n            \"id\": 1,\r\n            \"type\": \"MOBILE\",\r\n            \"number\": \"(11)123456789\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/people/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pessoas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/people/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"people",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pessoas por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/people/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Pessoas",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/people/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
