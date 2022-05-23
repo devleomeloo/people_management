@@ -10,10 +10,13 @@
 	</parent>
 	<groupId>com.devleomeloo</groupId>
 	<artifactId>people_management</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>people_management</name>
 	<description>People Management API Rest</description>
 	<properties>
+		<swagger.version>2.9.2</swagger.version>
+		<swagger-annotations.version>1.5.21</swagger-annotations.version>
+		<swagger-models.version>1.5.21</swagger-models.version>
 		<java.version>11</java.version>
 		<org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
 	</properties>
@@ -75,6 +78,21 @@
 		<dependency>
 			<groupId>org.xmlunit</groupId>
 			<artifactId>xmlunit-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>${swagger-annotations.version}</version>
 		</dependency>
 	</dependencies>
 
